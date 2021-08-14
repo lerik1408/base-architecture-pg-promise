@@ -1,0 +1,36 @@
+{
+  "name": "no-name",
+  "version": "1.0.0",
+  "description": "?",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint ./src/**/*.ts",
+    "lint:init": "eslint --init",
+    "serve": "bash -c 'source .env && tsnd --respawn --no-notify --clear --transpile-only src/app.ts'",
+    "migration:create": "ts-node ./src/utils/migrator/create-migration.ts",
+    "migration:run": "ts-node ./src/utils/migrator/run-migration.ts",
+    "migration:revert": "ts-node ./src/utils/migrator/revert-migration.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^17.4.2",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "mkdirp": "^1.0.4",
+    "pg-promise": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.8",
+    "@types/koa-bodyparser": "^4.3.2",
+    "@types/koa-router": "^7.4.1",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.5"
+  }
+}
